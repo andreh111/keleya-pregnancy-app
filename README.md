@@ -8,7 +8,7 @@
 
 3 - Go to the ios folder and run: pod install
 
-4 - To Run the application on IOS run: <mark>npx react-native run-ios</code>
+4 - To Run the application on IOS run: <code>npx react-native run-ios</code>
   - To Run the application on Android run: <code>npx react-native run-android</code>
 
 ## To Run E2E Testing
