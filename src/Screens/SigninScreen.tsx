@@ -19,14 +19,17 @@ const SigninScreen: React.FC<{}> = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [buttonColor, setButtonColor] = React.useState(colors.WARM_GREY);
+  const [disabled, setDisabled] = React.useState(false);
   const {t} = React.useContext<any>(LocalizationContext);
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (email !== '' && password !== '') {
       setButtonColor(colors.PALE_TEAL);
+      setDisabled(false);
     } else {
       setButtonColor(colors.WARM_GREY);
+      setDisabled(true);
     }
   }, [email, password]);
 
@@ -71,6 +74,7 @@ const SigninScreen: React.FC<{}> = () => {
           <KeleyaBigButton
             testId="continue-btn"
             backgroundColor={buttonColor}
+            disabled={disabled}
             buttonPress={() => {
               handleLogin();
             }}

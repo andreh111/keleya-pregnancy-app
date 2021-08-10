@@ -20,6 +20,10 @@ const AppNavigation = () => {
         screenOptions={{
           headerTransparent: true,
           title: '',
+          headerShadowVisible: false,
+          contentStyle: {
+            backgroundColor: '#FFF',
+          },
         }}>
         <Stack.Screen
           name="Initial"

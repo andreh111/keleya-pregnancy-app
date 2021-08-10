@@ -51,5 +51,6 @@ const styles = StyleSheet.create({
   skipBtn: {
     fontSize: 15,
     fontWeight: '400',
+    margin: 15,
   },
 });

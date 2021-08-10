@@ -8,6 +8,7 @@ import {LocalizationContext} from '../Context/LocalizationContext';
 import {useNavigation} from '@react-navigation/native';
 import {InitialScreenProp} from './RootStackParamList';
 import {setUserWorkout} from '../Redux/Actions/Auth/AuthActions';
+import {Platform} from 'react-native';
 
 export default function WorkoutFrequenceScreen() {
   const activitiesState = useSelector((state: RootStore) => state.activity);
@@ -28,27 +29,25 @@ export default function WorkoutFrequenceScreen() {
   return (
     <View testID="workout-screen" style={styles.backgroundMain}>
       <ImageBackground
-        resizeMode="center"
-        style={styles.backgroundMain}
+        style={{width: '100%', height: Dimensions.get('screen').height / 1.5}}
         source={require('../Assets/Images/workout-goal-background-image.jpg')}>
         <View style={{top: '30%'}}>
           <KeleyaTitle text={t('activity_workout_title')} />
         </View>
       </ImageBackground>
-      <View style={styles.bottomView}>
-        <Picker
-          testID="workout-activity"
-          selectedValue={selectedActivity}
-          onValueChange={(itemValue: string) =>
-            setSelectedAcitivity(itemValue)
-          }>
-          {activitiesState.activities?.map((activity: string) => {
-            return (
-              <Picker.Item key={activity} label={activity} value={activity} />
-            );
-          })}
-        </Picker>
 
+      <Picker
+        testID="workout-activity"
+        selectedValue={selectedActivity}
+        onValueChange={(itemValue: string) => setSelectedAcitivity(itemValue)}>
+        {activitiesState.activities?.map((activity: string) => {
+          return (
+            <Picker.Item key={activity} label={activity} value={activity} />
+          );
+        })}
+      </Picker>
+
+      <View style={styles.bottomView}>
         <KeleyaBigButton
           buttonPress={() => setUWorkout()}
           title={t('continue')}
@@ -61,10 +60,10 @@ export default function WorkoutFrequenceScreen() {
 
 const styles = StyleSheet.create({
   backgroundMain: {
-    width: '100%',
-    height: Dimensions.get('screen').height / 1.5,
+    flex: 1,
+    justifyContent: 'space-between',
   },
   bottomView: {
-    bottom: 35,
+    bottom: Platform.OS === 'ios' ? 35 : 0,
   },
 });

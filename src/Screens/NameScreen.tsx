@@ -42,7 +42,6 @@ export default function NameScreen() {
       contentContainerStyle={styles.mainContainer}>
       <View>
         <Image
-          resizeMode="center"
           style={styles.bgImg}
           source={require('../Assets/Images/couch_smile.jpg')}
         />
@@ -55,7 +54,7 @@ export default function NameScreen() {
           additionalStyles={styles.inputName}
         />
       </View>
-      <View>
+      <View style={styles.bottomView}>
         <KeleyaBigButton
           testId="continue-btn"
           buttonPress={() => setUName()}
@@ -71,7 +70,7 @@ export default function NameScreen() {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
   },
   bgImg: {
     width: '100%',
@@ -79,4 +78,7 @@ const styles = StyleSheet.create({
     bottom: 30,
   },
   inputName: {textAlign: 'center'},
+  bottomView: {
+    bottom: 35,
+  },
 });

@@ -40,7 +40,6 @@ export default function DateScreen() {
   return (
     <View testID="date-screen" style={styles.mainContainer}>
       <Image
-        resizeMode="center"
         style={styles.imageDueDate}
         source={require('../Assets/Images/due-date-background-image.jpg')}
       />
@@ -57,12 +56,14 @@ export default function DateScreen() {
           btnTestId={'show-date-picker-btn'}
         />
       </View>
-      <KeleyaBigButton
-        testId="continue-btn"
-        buttonPress={() => setUDate()}
-        title={t('continue')}
-        backgroundColor="#69c0ba"
-      />
+      <View style={styles.bottomView}>
+        <KeleyaBigButton
+          testId="continue-btn"
+          buttonPress={() => setUDate()}
+          title={t('continue')}
+          backgroundColor="#69c0ba"
+        />
+      </View>
     </View>
   );
 }
@@ -70,10 +71,13 @@ export default function DateScreen() {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
   },
   imageDueDate: {
     width: '100%',
     height: Dimensions.get('screen').height / 2,
+  },
+  bottomView: {
+    bottom: 36,
   },
 });

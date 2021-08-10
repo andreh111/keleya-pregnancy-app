@@ -47,8 +47,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    marginVertical: 5,
-    top: 10,
+    marginVertical: 8,
   },
   keleyaBigButtonText: {
     color: '#fff',

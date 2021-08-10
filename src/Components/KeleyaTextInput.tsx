@@ -1,4 +1,5 @@
 import React from 'react';
+import {Platform} from 'react-native';
 import {
   View,
   TextInput,
@@ -59,9 +60,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   input: {
-    padding: 10,
+    padding: Platform.OS === 'android' ? 5 : 10,
     flex: 1,
-    fontSize: 18,
+    fontSize: Platform.OS === 'android' ? 16 : 18,
   },
 });
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {TouchableOpacity, Text, StyleSheet, Platform} from 'react-native';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 
 interface KeleyaDatePickerProps {
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 0.1,
+    borderWidth: Platform.OS === 'ios' ? 0.1 : 0,
   },
   currentDate: {
     color: '#2e7bf6',
