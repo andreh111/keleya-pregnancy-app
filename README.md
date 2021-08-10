@@ -17,7 +17,8 @@ The App supports two languages: <b>English</b> & <b>German</b>
 
 To Switch between language there is a button in the header of the initial screen
 
-![alt text](https://github.com/andreh111/keleya-pregnancy-app/blob/master/src/Assets/Images/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-08-10%20at%2013.42.57.png)
+<img src="https://github.com/andreh111/keleya-pregnancy-app/blob/master/src/Assets/Images/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-08-10%20at%2013.42.57.png" alt="screenshot" width="200" height="400"/>
+
 
 
 ## To Run E2E Testing
