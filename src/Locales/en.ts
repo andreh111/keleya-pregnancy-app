@@ -7,7 +7,7 @@ export const en = {
   forgotpassword: 'Have you forgotten your password?',
   continue: 'Continue',
   activity_workout_title: 'How many times a week \nyou can be active?',
-  title_account_details: 'Add your details below to set \n an account',
+  title_account_details: 'Add your details below to set \n up an account',
   title_read_policy: "I've read the privacy policy",
   title_accept_terms: "I accept the terms & conditions and Keleya's\n advice",
   skip: 'Skip',
@@ -17,4 +17,5 @@ export const en = {
     "It's great you're here!First\nthing first,what should we\ncall you?",
   your_name: 'Your name',
   title_date_screen: 'When is your baby due, Sam?',
+  create_account: 'Create account',
 };

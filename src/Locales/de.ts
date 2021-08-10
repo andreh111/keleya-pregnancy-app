@@ -20,4 +20,5 @@ export const de = {
     'Schön, dass du hier bist! Als erstes, wie sollen wir dich\n nennen?',
   your_name: 'Dein Name',
   title_date_screen: 'Wann ist dein Baby fällig, Sam?',
+  create_account: 'Benutzerkonto erstellen',
 };

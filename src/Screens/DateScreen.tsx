@@ -22,7 +22,7 @@ export default function DateScreen() {
   console.log(authState);
 
   const setUDate = () => {
-    dispatch(setUserDate(currentDate));
+    dispatch(() => setUserDate(currentDate));
     navigation.navigate('Workout');
   };
   const showDatePicker = () => {

@@ -42,7 +42,7 @@ const KeleyaTextInput: React.FC<KeleyaTextInputProps> = ({
         style={[styles.input, additionalStyles]}
       />
       {isPasswordField && (
-        <Icon onPress={setShowPassword} name="eye" size={16} />
+        <Icon onPress={setShowPassword} name="eye" size={20} />
       )}
     </View>
   );
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.5,
     width: width - 80,
     alignSelf: 'center',
-    // marginTop: 20,
+    marginTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

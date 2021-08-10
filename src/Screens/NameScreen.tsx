@@ -24,7 +24,7 @@ export default function NameScreen() {
   console.log(authState);
 
   const setUName = () => {
-    dispatch(setUserName(name));
+    dispatch(() => setUserName(name));
     navigation.navigate('Date');
   };
   React.useEffect(() => {

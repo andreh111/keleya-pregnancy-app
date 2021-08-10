@@ -19,6 +19,7 @@ const AppNavigation = () => {
       <Stack.Navigator
         screenOptions={{
           headerTransparent: true,
+          title: '',
         }}>
         <Stack.Screen
           name="Initial"

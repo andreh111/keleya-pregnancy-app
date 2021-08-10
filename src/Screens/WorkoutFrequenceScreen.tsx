@@ -21,7 +21,7 @@ export default function WorkoutFrequenceScreen() {
   const navigation = useNavigation<InitialScreenProp>();
 
   const setUWorkout = () => {
-    dispatch(setUserWorkout(selectedActivity));
+    dispatch(() => setUserWorkout(selectedActivity));
     navigation.navigate('Success');
   };
 

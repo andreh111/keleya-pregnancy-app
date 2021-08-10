@@ -12,7 +12,7 @@ import {InitialScreenProp} from './RootStackParamList';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 const {height} = Dimensions.get('screen');
-
+const isPasswordField = true;
 const SignupScreen: React.FC<{}> = () => {
   const {t} = useContext<any>(LocalizationContext);
   const [email, setEmail] = React.useState('');
@@ -21,6 +21,9 @@ const SignupScreen: React.FC<{}> = () => {
   const [acceptTerms, setAcceptTerms] = React.useState(false);
   const [buttonColor, setButtonColor] = React.useState(colors.WARM_GREY);
   const [disabled, setDisabled] = React.useState(true);
+  const [showPassword, setShowPassword] = React.useState(
+    isPasswordField ? true : false,
+  );
   const dispatch = useDispatch();
   const navigation = useNavigation<InitialScreenProp>();
 
@@ -35,62 +38,65 @@ const SignupScreen: React.FC<{}> = () => {
   }, [email, password, acceptPrivacy, acceptTerms]);
 
   const register = () => {
-    dispatch(registerUser(email, password));
+    dispatch(() => registerUser(email, password));
     navigation.navigate('Name');
   };
 
   return (
-    <View testID="signup-screen" style={styles.mainContainer}>
-      <KeyboardAwareScrollView>
-        <View>
-          <Image
-            testID="img"
-            resizeMode="center"
-            style={styles.bgImg}
-            source={require('../Assets/Images/authentication-background-image.jpg')}
-          />
-          <KeleyaTitle text={t('title_account_details')} />
-
-          <KeleyaTextInput
-            value={email}
-            testId="email"
-            onValueChange={(e: string) => setEmail(e)}
-            placeholder="example@gmail.com"
-          />
-          <KeleyaTextInput
-            value={password}
-            testId="password"
-            onValueChange={(p: string) => setPassword(p)}
-            placeholder={t('enterpassword')}
-          />
-
-          <KeleyaTitle
-            text={t('title_read_policy')}
-            size={14}
-            value={acceptPrivacy}
-            onValueChange={() => setAcceptPrivacy(!acceptPrivacy)}
-            checkboxRendered={true}
-            checkboxTestId={'accept-privacy'}
-          />
-          <KeleyaTitle
-            text={t('title_accept_terms')}
-            size={14}
-            value={acceptTerms}
-            onValueChange={() => setAcceptTerms(!acceptTerms)}
-            checkboxRendered={true}
-            checkboxTestId={'accept-terms'}
-          />
-        </View>
-
-        <KeleyaBigButton
-          buttonPress={() => register()}
-          backgroundColor={buttonColor}
-          disabled={disabled}
-          title={t('continue')}
-          testId="continue-btn"
+    <KeyboardAwareScrollView
+      testID="signup-screen"
+      contentContainerStyle={styles.mainContainer}>
+      <View>
+        <Image
+          testID="img"
+          resizeMode="center"
+          style={styles.bgImg}
+          source={require('../Assets/Images/authentication-background-image.jpg')}
         />
-      </KeyboardAwareScrollView>
-    </View>
+        <KeleyaTitle text={t('title_account_details')} />
+
+        <KeleyaTextInput
+          value={email}
+          testId="email"
+          onValueChange={(e: string) => setEmail(e)}
+          placeholder="example@gmail.com"
+        />
+        <KeleyaTextInput
+          value={password}
+          testId="password"
+          onValueChange={(p: string) => setPassword(p)}
+          placeholder={t('enterpassword')}
+          setShowPassword={() => setShowPassword(!showPassword)}
+          isPasswordField={isPasswordField}
+          showPassword={showPassword}
+        />
+
+        <KeleyaTitle
+          text={t('title_read_policy')}
+          size={14}
+          value={acceptPrivacy}
+          onValueChange={() => setAcceptPrivacy(!acceptPrivacy)}
+          checkboxRendered={true}
+          checkboxTestId={'accept-privacy'}
+        />
+        <KeleyaTitle
+          text={t('title_accept_terms')}
+          size={14}
+          value={acceptTerms}
+          onValueChange={() => setAcceptTerms(!acceptTerms)}
+          checkboxRendered={true}
+          checkboxTestId={'accept-terms'}
+        />
+      </View>
+
+      <KeleyaBigButton
+        buttonPress={() => register()}
+        backgroundColor={buttonColor}
+        disabled={disabled}
+        title={t('create_account')}
+        testId="continue-btn"
+      />
+    </KeyboardAwareScrollView>
   );
 };
 
