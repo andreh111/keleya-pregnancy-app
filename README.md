@@ -25,4 +25,4 @@ Start the test using:
 
 detox test -c ios.sim.release
 
-(https://github.com/andreh111/keleya-pregnancy-app/blob/master/artifacts/ios.sim.release.2021-08-10%2008-25-43Z/%E2%9C%93%20Login%20Flow%20Login%20Steps%20should%20generate%20new%20wallet/test.mp4)
+![video recording for detox test](https://github.com/andreh111/keleya-pregnancy-app/blob/master/artifacts/ios.sim.release.2021-08-10%2008-25-43Z/%E2%9C%93%20Login%20Flow%20Login%20Steps%20should%20generate%20new%20wallet/test.mp4)
