@@ -27,4 +27,8 @@ detox test -c ios.sim.release
 
 To view the recording of the Tests:
 
-https://github.com/andreh111/keleya-pregnancy-app/blob/master/artifacts/ios.sim.release.2021-08-10%2008-25-43Z/%E2%9C%93%20Login%20Flow%20Login%20Steps%20should%20generate%20new%20wallet/test.mp4
+###Signup Flow Recording
+https://github.com/andreh111/keleya-pregnancy-app/blob/master/artifacts/ios.sim.release.2021-08-10%2008-39-15Z/%E2%9C%93%20Signup%20Flow%20Signup%20Steps%20should%20go%20with%20all%20register%20process/test.mp4
+
+###Signin Flow recording 
+https://github.com/andreh111/keleya-pregnancy-app/blob/master/artifacts/ios.sim.release.2021-08-10%2008-39-15Z/%E2%9C%93%20Login%20Flow%20Login%20Steps%20should%20walk%20in%20the%20login%20process/test.mp4
