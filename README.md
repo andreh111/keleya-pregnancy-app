@@ -11,6 +11,15 @@
 4 - To Run the application on IOS run: <code>npx react-native run-ios</code>
   - To Run the application on Android run: <code>npx react-native run-android</code>
 
+## Language Support
+
+The App supports two languages: <b>English</b> & <b>German</b>
+
+To Switch between language there is a button in the header of the initial screen
+
+![alt text](http://url/to/img.png)
+
+
 ## To Run E2E Testing
 
 Run the following commands: 
