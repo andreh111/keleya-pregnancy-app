@@ -4,12 +4,12 @@
 
 1 - Clone the repository
 
-2 - Go to the project folder and run : <mark>npm install or yarn install</mark>
+2 - Go to the project folder and run : <code>npm install or yarn install</code>
 
 3 - Go to the ios folder and run: pod install
 
-4 - To Run the application on IOS run: <mark>npx react-native run-ios</mark>
-  - To Run the application on Android run: <mark>npx react-native run-android</mark>
+4 - To Run the application on IOS run: <mark>npx react-native run-ios</code>
+  - To Run the application on Android run: <code>npx react-native run-android</code>
 
 ## To Run E2E Testing
 
@@ -19,11 +19,11 @@ Run the following commands:
 For testing on iOS
 Build the iOS app using:
 
-<mark>detox build -c ios.sim.release</mark>
+<code>detox build -c ios.sim.release</code>
 
 Start the test using:
 
-<mark>detox test -c ios.sim.release</mark>
+<code>detox test -c ios.sim.release</code>
 
 To view the recording of the Tests:
 
