@@ -9,8 +9,7 @@ describe('Login Flow', () => {
 
   describe('Login Steps', () => {
     // test case for wallet generation
-
-    it('should generate new wallet', async () => {
+    it('should walk in the login process', async () => {
       await element(by.id('login-btn')).atIndex(0).tap();
       await waitFor(element(by.id('login-screen'))).toBeVisible();
 
