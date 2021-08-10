@@ -6,7 +6,7 @@
 
 2 - Go to the project folder and run : <code>npm install or yarn install</code>
 
-3 - Go to the ios folder and run: pod install
+3 - Go to the ios folder and run: <code>pod install</code>
 
 4 - To Run the application on IOS run: <code>npx react-native run-ios</code>
   - To Run the application on Android run: <code>npx react-native run-android</code>
