@@ -1,0 +1,21 @@
+export const en = {
+  initial_title: 'For a fit and relaxed \npregnancy',
+  get_started: 'Get Started',
+  or_login: 'Or Login',
+  welcomeback: 'Welcome back!',
+  enterpassword: 'Enter a password',
+  forgotpassword: 'Have you forgotten your password?',
+  continue: 'Continue',
+  activity_workout_title: 'How many times a week \nyou can be active?',
+  title_account_details: 'Add your details below to set \n up an account',
+  title_read_policy: "I've read the privacy policy",
+  title_accept_terms: "I accept the terms & conditions and Keleya's\n advice",
+  skip: 'Skip',
+  allow_notifications: 'Allow notification',
+  success_title: 'Get notifications to boost \nyour motivation',
+  title_name_screen:
+    "It's great you're here!First\nthing first,what should we\ncall you?",
+  your_name: 'Your name',
+  title_date_screen: 'When is your baby due, Sam?',
+  create_account: 'Create account',
+};
